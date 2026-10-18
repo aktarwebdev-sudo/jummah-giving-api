@@ -43,8 +43,8 @@ module.exports = async (req, res) => {
           quantity: 1,
         },
       ],
-      success_url: 'https://your-website.com/thank-you', // change this
-      cancel_url: 'https://your-website.com/donate',     // change this
+      success_url: 'https://darus-salam.com/thank-you', // change this
+      cancel_url: 'https://darus-salam.com/transaction-cancelled',     // change this
       submit_type: 'donate',
     });
 

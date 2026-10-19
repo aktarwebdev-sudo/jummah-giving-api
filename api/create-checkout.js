@@ -3,7 +3,10 @@ const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 module.exports = async (req, res) => {
   // Allow CORS from your Hostinger site
-  res.setHeader('Access-Control-Allow-Origin', '*'); // later restrict to your domain
+  // === CORS – change the origin to your real domain ===
+  const allowedOrigin = 'https://darus-salam.com/';   // ← put your Hostinger domain here
+  
+  res.setHeader('Access-Control-Allow-Origin', allowedOrigin); // later restrict to your domain
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
